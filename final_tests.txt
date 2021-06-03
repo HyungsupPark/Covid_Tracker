@@ -1,0 +1,43 @@
+**PART 1**
+filename = "part1_test1.csv"
+covid19_data = parse_covid19(filename)
+covid19_data
+
+**PART 2**
+filename = "part1_test1.csv"
+covid19_data = parse_covid19(filename)
+country_names = ["China", "Australia", "South Korea", "Taiwan"]
+data = select_countries(country_names, covid19_data)
+
+**PART 3**
+filename = "part1_test1.csv"
+covid19_data = parse_covid19(filename)
+
+China = Covid_Country("China", covid19_data)
+print(China.country_name)
+
+print(China.daily_count)
+
+print(China.day_count('2020-02-04'))
+
+**PART 4**
+filename = "part1_test1.csv"
+covid19_data = parse_covid19(filename)
+China = Covid_Country("China", covid19_data)
+Armenia = Covid_Country("Armenia", covid19_data)
+Afghanistan = Covid_Country("Afghanistan", covid19_data)
+country_list = [China, Armenia, Afghanistan]
+sp_node = Split_Node()
+sp_node.build_tree(country_list, '2020-03-26')
+
+
+**PART 4**
+part4_test_dict = {'Canada': [('2020-03-26', 9), ('2020-03-27', 12), ('2020-03-28', 45), ('2020-03-29', 45)], 'England': [('2020-03-26', 21), ('2020-03-27', 65), ('2020-03-28', 65), ('2020-03-29', 86)], 'China': [('2020-03-26', 60), ('2020-03-27', 73), ('2020-03-28', 331), ('2020-03-29', 331)]}
+Canada = Covid_Country('Canada', part4_test_dict)
+England = Covid_Country('England', part4_test_dict)
+China = Covid_Country('China', part4_test_dict)
+country_list = [Canada, England, China]
+date = '2020-03-29'
+sp_node = Split_Node()
+sp_node.build_tree(country_list, date)
+
